@@ -2,6 +2,6 @@
 
 module Pangram
   def self.pangram?(sentence)
-    sentence.downcase.scan(/[a-zA-Z]/).sort.uniq.join == ('a'..'z').to_a
+    (('a'..'z').to_a - sentence.downcase.chars).empty?
   end
 end
