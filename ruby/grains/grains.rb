@@ -9,6 +9,6 @@ module Grains
   end
 
   def self.total
-    (1..CELLS).sum { |square| square(square) }
+    2**CELLS - 1
   end
 end
